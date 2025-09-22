@@ -1,3 +1,5 @@
+# Crée la clé SSH pour se connecter aux nœuds du cluster.
+
 resource "random_pet" "ssh_key_name" {
   prefix    = "ssh"
   separator = ""

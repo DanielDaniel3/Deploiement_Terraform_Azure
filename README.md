@@ -6,7 +6,7 @@ Azure Kubernetes Service (AKS) est un service Kubernetes géré qui vous permet 
 
 
 <div align="center">
-  <img src="https://www.google.com/imgres?q=AKS%20azure%20logo&imgurl=https%3A%2F%2Fblog.ippon.fr%2Fcontent%2Fimages%2F2020%2F06%2F600_487492196.jpeg&imgrefurl=https%3A%2F%2Fblog.ippon.fr%2F2020%2F06%2F10%2Faks%2F&docid=q-pYvHkbrScmaM&tbnid=TFQj57-I80YifM&vet=12ahUKEwjKr-mPi-2PAxWuUaQEHVVdOHIQM3oECBcQAA..i&w=289&h=162&hcb=2&ved=2ahUKEwjKr-mPi-2PAxWuUaQEHVVdOHIQM3oECBcQAA"/>
+  <img src="https://miro.medium.com/v2/resize:fit:644/1*EwqiVKo9w2ocGD2tjl9UOA.png"/>
 </div>
 
 Dans notre démonstration nous :

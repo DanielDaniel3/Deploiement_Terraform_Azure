@@ -1,4 +1,7 @@
-# Generate random resource group name
+# Générer un nom de groupe de ressources aléatoire
+
+# Contient configuration principale du cluster AKS et des ressources associées.
+
 resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
 }

@@ -1,3 +1,5 @@
+# Définit les informations à afficher après le déploiement (comme l'IP du cluster).
+
 output "resource_group_name" {
   value = azurerm_resource_group.rg.name
 }

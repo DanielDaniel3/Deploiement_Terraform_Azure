@@ -1,3 +1,4 @@
+# Fichier contenant les différents objets de déploiement et des services de notre application conteneurisée
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,14 +17,14 @@ spec:
         "kubernetes.io/os": linux
       containers:
       - name: rabbitmq
-        image: mcr.microsoft.com/mirror/docker/library/rabbitmq:3.10-management-alpine
+        image: mcr.microsoft.com/mirror/docker/library/rabbitmq:3.10-management-alpine  # Broker de messages pour la communication entre services
         ports:
         - containerPort: 5672
           name: rabbitmq-amqp
         - containerPort: 15672
           name: rabbitmq-http
         env:
-        - name: RABBITMQ_DEFAULT_USER
+        - name: RABBITMQ_DEFAULT_USER # Identifiants en clair (À SECURISER en production en utilisant Azure Key Vault!)
           value: "username"
         - name: RABBITMQ_DEFAULT_PASS
           value: "password"
@@ -111,7 +112,7 @@ spec:
           limits:
             cpu: 75m
             memory: 128Mi
-      initContainers:
+      initContainers:      # Conteneur d'initialisation critique
       - name: wait-for-rabbitmq
         image: busybox
         command: ['sh', '-c', 'until nc -zv rabbitmq 5672; do echo waiting for rabbitmq; sleep 2; done;']
@@ -219,8 +220,8 @@ metadata:
   name: store-front
 spec:
   ports:
-  - port: 80
-    targetPort: 8080
+  - port: 80           # Port externe
+    targetPort: 8080   # Port interne du container
   selector:
     app: store-front
-  type: LoadBalancer
+  type: LoadBalancer   # Seul service accessible depuis l'extérieure (génère une IP publique)

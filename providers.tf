@@ -1,3 +1,5 @@
+# Configure Azure comme fournisseur cloud et la version de Terraform.
+
 terraform {
   required_version = ">=1.0"
 

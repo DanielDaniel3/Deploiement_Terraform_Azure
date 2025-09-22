@@ -42,7 +42,7 @@ Nous présentons l'architecture de notre application à déployer.
 Nous exécutons la commande kubectl apply : 
 
 ````
-kubectl apply -f aks-store-quickstart.yaml
+kubectl apply -f aks-store.yaml
 ````
 Nous exécutons notre manifest de déploiement et nous obtenons le déploiement des différents objets kubernetes entre autre nos déploiements et nos services. Ensuite on utilise les commandes suivantes pour vérifier que tous les élements fonctionnent comme prévu : 
 
